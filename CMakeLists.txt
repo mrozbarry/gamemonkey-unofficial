@@ -1,8 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
 
-project (GameMonkey)
+project (GameMonkey CXX C)
 
-#   #define GM_LITTLE_ENDIAN      0
+INCLUDE(TestBigEndian)
+
 TEST_BIG_ENDIAN(IS_BIG_ENDIAN)
 IF (IS_BIG_ENDIAN)
         ADD_DEFINITIONS("-DGM_LITTLE_ENDIAN=0")
@@ -11,6 +12,7 @@ ELSE (IS_BIG_ENDIAN)
 ENDIF (IS_BIG_ENDIAN)
 
 IF (MSVC)
+	ADD_DEFINITIONS("-DGM_IS_MSVC")
 	IF (MSVC_VERSION < 1600)
 		ADD_DEFINITIONS("-DGM_MSVC_EARLIER_2010")
 	ENDIF (MSVC_VERSION < 1600)
@@ -26,7 +28,7 @@ add_library(libgmscript
 				src/gmCodeGenHooks.cpp
 				src/gmCodeTree.cpp
 				src/gmCrc.cpp
-				src/gmDebug.cpp
+#				src/gmDebug.cpp
 				src/gmFunctionObject.cpp
 				src/gmHash.cpp
 				src/gmIncGC.cpp
