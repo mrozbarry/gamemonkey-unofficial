@@ -12,7 +12,7 @@
 #ifndef _GMARRAYSIMPLE_H_
 #define _GMARRAYSIMPLE_H_
 
-#include "gmConfig.h"
+#include "gmConfig_p.h"
 #include "gmUtil.h"
 
 #define TMPL template <class T>

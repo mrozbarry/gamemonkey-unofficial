@@ -14,6 +14,7 @@
 #include "gmThread.h"
 #include "gmMachine.h"
 #include "gmUtil.h"
+#include <cstdlib>
 
 //
 // machine
@@ -21,7 +22,9 @@
 
 static int GM_CDECL gmVersion(gmThread * a_thread)
 {
-  a_thread->PushNewString(GM_VERSION);
+  char gmversion[32];
+  itoa(GM_VERSION, gmversion, 10);
+  a_thread->PushNewString(gmversion);
   return GM_OK;
 }
 
