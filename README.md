@@ -22,6 +22,12 @@ What are the key features of GM?
 * Competitive performance when compared to other scripting languages for both CPU and Memory usage. Speed is a trade off for flexibility and simplicity.
 * Easily modifiable as it is written in C++ and uses Flex and Bison.
 
+Where can I get more information about GameMonkey and this unofficial repo?
+---------------------------------------------------------------------------
+
+* [GameMonkey Official Site](http://www.gmscript.com/)
+* [Unofficial Repo Forum Thread](http://www.gmscript.com/gamemonkey/forum/viewtopic.php?f=5&t=613)
+
 How do I build GameMonkey?
 --------------------------
 
